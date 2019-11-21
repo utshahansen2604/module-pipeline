@@ -1,9 +1,7 @@
-provider "aws" {
-  region= "ap-south-1"
-}
+
 
 module "uts-pipe1" {
-  source = "https://github.com/Abhishek5340/Abhishek5340-terraform.git"
+  source = "github.com/Abhishek5340/Abhishek5340-terraform"
 }
 
 variable "my-text" {
@@ -13,3 +11,12 @@ variable "my-text" {
 output "out-pipe1" {
   value = module.uts-pipe1.Abhi-OutPipe + var.my-text
 }
+
+
+
+# module "uts-pipe1" {
+#   source = "github.com/Abhishek5340/Abhishek5340-terraform"
+# }
+# output "test" {
+#   value = module.uts-pipe1.Abhi-OutPipe
+# }
